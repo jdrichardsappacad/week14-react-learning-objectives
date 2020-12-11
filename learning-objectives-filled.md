@@ -487,3 +487,10 @@ export default ContactUs;
 
 27. **Describe the relationships between provider, consumer, and context**<br/>
     Context allows "global" data in a React application and stores a single value. A context's Provider is used to wrap a React application to enable all components in the application to access the context's value. A Consumer is a React component that reads a context's value.
+
+### LINKS
+
+1. [Learning Objectives, (no answers)](./learning-objectives-empty.md)
+2. [Learning Objectives With Answers](./learning-objectives-filled.md)
+3. [Imports CheatSheet](./imports-cheatsheet.md)
+4. [Exports CheatSheet](./exports-cheatsheet.md)

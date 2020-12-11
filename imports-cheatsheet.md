@@ -30,7 +30,7 @@ Go to [Exports](./exports-cheatsheet) to see how to export.
 
 ### Links:
 
-- [Answers](./learning-objectives-filled)
-- [Imports CheatSheet](./imports-cheatsheet)
-- [Exports CheatSheet](./exports-cheatsheet)
+- [Answers](./learning-objectives-filled.md)
+- [Imports CheatSheet](./imports-cheatsheet.md)
+- [Exports CheatSheet](./exports-cheatsheet.md)
 - [Read Me](./README.md)

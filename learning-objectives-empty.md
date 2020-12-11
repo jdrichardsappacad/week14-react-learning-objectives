@@ -56,9 +56,9 @@
 
 27. **Describe the relationships between provider, consumer, and context**
 
-### Links:
+### LINKS:
 
-- [Answers](./learning-objectives-filled)
-- [Imports CheatSheet](./imports-cheatsheet)
-- [Exports CheatSheet](./exports-cheatsheet)
+- [Answers](./learning-objectives-filled.md)
+- [Imports CheatSheet](./imports-cheatsheet.md)
+- [Exports CheatSheet](./exports-cheatsheet.md)
 - [Read Me](./README.md)
