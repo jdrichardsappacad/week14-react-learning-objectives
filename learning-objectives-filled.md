@@ -16,7 +16,7 @@
     We use the React DevTools extension as an extension in our Browser DevTools to debug and view when a component is rendering
 
 4.  **Describe how JSX transforms into actual DOM nodes**<br/>
-    To transfer JSX into DOM nodes, we use the ReactDOM.render method which takes a React virtual DOM node and a sends it to a real DOM node in the document using a query selector. Babel will transfer the JSX into JavaScript. Then ReactDOM.render will convert the virtual DOM node into a real DOM node and paint the DOM.
+    To transfer JSX into DOM nodes, we use the ReactDOM.render method. It takes a React virtual DOM node's changes allows Babel to transpile it and sends the JS changes to the DOM.
 
 5.  **Use the `ReactDOM.render` method to have React render your virtual DOM nodes under an actual DOM node**<br/>
 
@@ -52,7 +52,7 @@
     ```
 
 7.  **Use`create-react-app` to stand up a new React application and import needed assets**<br/>
-    We have two ways of creating a create-react-app application.
+
     We create the default create-react-application by typing in our terminal
 
     ```js
@@ -60,20 +60,21 @@
     ```
 
 8.  **Construct a custom 'create-react-app' template and use it to start a new application**<br/>
-    We also have a special App Academy template which we create by using:
+    We have a special App Academy template which we create by using:
 
     ```js
     npx create-react-app --template @appacademy/simple --use-npm
     ```
 
 9.  **Pass props into a React component**<br/>
-    React elements can accept props from its parent or from wherever it is created or rendered. props is an object that gets passed down from the parent function component into the child function component.
+    React elements can accept props from its parent or from wherever it is created or rendered. **props** is an object that gets passed down from the parent function component into the child function component.
 
     ```js
     function NavBar() {
       return (
         <nav>
           <h1>Pet App</h1>
+          // props being passed in component
           <NavLinks hello='world' />
         </nav>
       );
@@ -88,6 +89,7 @@
       return (
         <nav>
           <h1>Pet App</h1>
+          //props passes as a variable
           <NavLinks hello={world} />
         </nav>
       );
@@ -357,8 +359,8 @@ export default ContactUs;
 ```
 
 22. **Describe a controlled input.**<br/>
-    ** A React form input with `value` and `onChange` props.**
-
+    ** IMPORTANT**
+    A React form input with `value` and `onChange` props.
 23. **Handle form submission.**<br/>
     To submit a form we create a submission function. It takes an event as an argument.
     We must first prevent the default html actions from taking over using `event.preventDefualt` Then we can create a new data structure to hold our information, usually an object.
