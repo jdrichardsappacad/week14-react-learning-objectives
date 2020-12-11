@@ -1,4 +1,4 @@
-## IMPORTS
+## ES6 IMPORTS
 
 Imports are handled differently in ES6 Modules than in CommonJS. We use `import <name> from <file or package>` to import in ES6
 

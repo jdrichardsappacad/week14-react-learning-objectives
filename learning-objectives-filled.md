@@ -12,6 +12,20 @@
 
     Here, the JavaScript hello variable is set to a React virtual DOM h1 element with the text "Hello World!".
 
+    You can also nest virtual DOM nodes in each other just like how you do it in HTML with the real DOM.
+
+    ```js
+    const navBar = (
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Profile</li>
+          <li>Settings</li>
+        </ul>
+      </nav>
+    );
+    ```
+
 3.  **Use debugging tools to determine when a component is rendering**<br/>
     We use the React DevTools extension as an extension in our Browser DevTools to debug and view when a component is rendering
 
