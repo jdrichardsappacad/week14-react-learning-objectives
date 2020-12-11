@@ -246,7 +246,7 @@
     ```
 
 14. **Use React Router history to programmatically change the browser's URL**<br/>
-    <span style="color:red">_This one is important because we spent so little time on it. It is better to use after something has happened, for example, a button click_</span>
+    <mark>_This one is important because we spent so little time on it. It is better to use after something has happened, for example, a button click_</mark>
     The `useHistory` hook returns a history object that has convenient methods for navigation. history lets you update the URL programmatically For example, suppose you want to push a new URL when the user clicks a button. It has two useful methods: - push - We can push the user to the location of our choosing by naming the route we are pushing them to:
 
         ```js
