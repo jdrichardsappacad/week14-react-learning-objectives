@@ -1,7 +1,7 @@
 # REACT Week 14 Learning Objectives Answers
 
 1.  **Explain how React uses a tree data structure called the virtual DOM to model the DOM**<br/>
-    The virtual DOM is a copy of the actual DOM tree that is used to reconcile updates using React's diffing algorithm, and send those updates back to commit to the DOM
+    The virtual DOM is a copy of the actual DOM tree. Updates in React are made to the virtual DOM. React uses a diffing algorithm to reconcile the changes and send the to the DOM to commit and paint.
 
 2.  **Create virtual DOM nodes using JSX**<br/>
     To create a React virtual DOM node using JSX, define HTML syntax in a JavaScript file.
@@ -16,7 +16,7 @@
     We use the React DevTools extension as an extension in our Browser DevTools to debug and view when a component is rendering
 
 4.  **Describe how JSX transforms into actual DOM nodes**<br/>
-    To start the conversion process, you have to use the ReactDOM.render method which takes a React virtual DOM node and a real DOM node in the document. ReactDOM.render will convert the virtual DOM node into a real DOM and nest it under the given real DOM node.
+    To transfer JSX into DOM nodes, we use the ReactDOM.render method which takes a React virtual DOM node and a sends it to a real DOM node in the document using a query selector. Babel will transfer the JSX into JavaScript. Then ReactDOM.render will convert the virtual DOM node into a real DOM node and paint the DOM.
 
 5.  **Use the `ReactDOM.render` method to have React render your virtual DOM nodes under an actual DOM node**<br/>
 
