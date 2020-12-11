@@ -1,0 +1,55 @@
+# REACT Week 14 Learning Objectives Questions
+
+1.  **Explain how React uses a tree data structure called the virtual DOM to model the DOM**
+
+2.  **Create virtual DOM nodes using JSX**
+
+3.  **Use debugging tools to determine when a component is rendering**
+
+4.  **Describe how JSX transforms into actual DOM nodes**
+
+5.  **Use the `ReactDOM.render` method to have React render your virtual DOM nodes under an actual DOM node**
+
+6.  **Attach an event listener to an actual DOM node using a virtual node**
+
+7.  **Use`create-react-app` to stand up a new React application and import needed assets**
+
+8.  **Construct a custom 'create-react-app' template and use it to start a new application**
+
+9.  **Pass props into a React component**
+
+10. **Destructure props**
+
+11. **Create routes using components from the react-router-dom package**
+
+12. **Generate navigation links using components from the react-router-dom package**
+
+13. **Use React Router params to access path variables**
+
+14. **Use React Router history to programmatically change the browser's URL**
+
+15. **Redirect users by using the <Redirect> component**
+
+16. **Use the useState hook to manage a component's state.**
+
+17. **Initialize and update state within a function component.**
+
+18. **Use the useEffect hook to trigger an operation as a result of a side effect.**
+
+19. **Describe the three ways in which a re-render can be triggered for a React component.**
+
+20. **Optimize your application's performance by using useCallback.**
+
+21. **Construct a form that can capture user data using common form inputs.**
+
+22. **Describe a controlled input.**
+
+23. **Handle form submission.**
+
+24. **Implement form validations.**
+
+25. **Create a React wrapper component**
+
+26. **Retrieve values from a Context throughout your application**
+
+27. **Describe the relationships between provider, consumer, and context**
