@@ -1,21 +1,27 @@
-#EXPORTS/IMPORTS ONE-TO-ONE AT A GLANCE
+# EXPORTS/IMPORTS ONE-TO-ONE AT A GLANCE
 
-Name Export | Name Import
+**Name Export | Name Import**
 
 ```js
 export const num = 12;
 import { num } from '...';
 ```
 
-Default Export | Default Import
+**Default Export | Default Import**
+
+```js
 export default myFunc
 import <youMakeUpName> from '...'
+```
 
-Rename Export | NamedImport
+**Rename Export | NamedImport**
+
+```js
 export {person as newPerson}
 import {newPerson}
+```
 
-Name + Default | Import All
+**Name + Default | Import All**
 
 ```js
 export const num = 22;
@@ -25,7 +31,7 @@ import \* as anyName from '...'
 console.log(anyName.num, anyName.myFunc())
 ```
 
-Export List + Rename | Import List + Rename
+**Export List + Rename | Import List + Rename**
 
 ```js
 export { num1, num2 as newNum2 };
