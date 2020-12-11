@@ -26,9 +26,9 @@ import {newPerson}
 ```js
 export const num = 22;
 export default myFunc;
-import \* as anyName from '...'
+import * as anyName from '...';
 
-console.log(anyName.num, anyName.myFunc())
+console.log(anyName.num, anyName.myFunc());
 ```
 
 **Export List + Rename | Import List + Rename**
