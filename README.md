@@ -1,5 +1,7 @@
 # Week 14 Package Learning Assets
 
+**Included in this Repo are Week 14 Learning Objectives with and without answers as well as a CheatSheet for ES6 Imports and Exports.**
+
 ## LINKS
 
 1. [Learning Objectives, (no answers)](./learning-objectives-empty.md)
