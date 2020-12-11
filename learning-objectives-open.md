@@ -48,7 +48,9 @@
 
 24. **Implement form validations.**
 
-25. **Create a React wrapper component**
+25. a. **Create a React wrapper component**
+    b. **Create a React provider component that will manage the value of a Context**
+    c. **Share and manage global information within a React application using Context**
 
 26. **Retrieve values from a Context throughout your application**
 

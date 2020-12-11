@@ -422,14 +422,14 @@ export default ContactUs;
     }
     ```
 
-25. **Create a React wrapper component**
+25. a. **Create a React wrapper component**
     In React we can create a parent wrapper component that can render its children dynamically.
     Each React component has a props property called children. This is a reserved property that holds an array of all the children components wrapped by the parent component.
 
-    **Create a React provider component that will manage the value of a Context**
+    b. **Create a React provider component that will manage the value of a Context**
     We include the Provider Component inside the wrapper. It must include the exact key word value as a prop and pass its values in any chosen data structure. Values include strings, functions, objects etc.
 
-    **Share and manage global information within a React application using Context**
+    c. **Share and manage global information within a React application using Context**
     We can share global information within a React application by using the createContext function from React to create a global object. We declare and export a variable with the context to make it available to other components. CreateContext accespts an argument which will be used as the default value. It will be overriden if context is defined inside the Provider Component.
 
     ```js
