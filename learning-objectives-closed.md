@@ -1,9 +1,9 @@
 # REACT Week 14 Learning Objectives Answers
 
-1.  **Explain how React uses a tree data structure called the virtual DOM to model the DOM**
+1.  **Explain how React uses a tree data structure called the virtual DOM to model the DOM**<br/>
     The virtual DOM is a copy of the actual DOM tree that is used to reconcile updates using React's diffing algorithm, and send those updates back to commit to the DOM
 
-2.  **Create virtual DOM nodes using JSX**
+2.  **Create virtual DOM nodes using JSX**<br/>
     To create a React virtual DOM node using JSX, define HTML syntax in a JavaScript file.
 
     ```js
@@ -12,13 +12,13 @@
 
     Here, the JavaScript hello variable is set to a React virtual DOM h1 element with the text "Hello World!".
 
-3.  **Use debugging tools to determine when a component is rendering**
+3.  **Use debugging tools to determine when a component is rendering**<br/>
     We use the React DevTools extension as an extension in our Browser DevTools to debug and view when a component is rendering
 
-4.  **Describe how JSX transforms into actual DOM nodes**
+4.  **Describe how JSX transforms into actual DOM nodes**<br/>
     To start the conversion process, you have to use the ReactDOM.render method which takes a React virtual DOM node and a real DOM node in the document. ReactDOM.render will convert the virtual DOM node into a real DOM and nest it under the given real DOM node.
 
-5.  **Use the `ReactDOM.render` method to have React render your virtual DOM nodes under an actual DOM node**
+5.  **Use the `ReactDOM.render` method to have React render your virtual DOM nodes under an actual DOM node**<br/>
 
     ```js
     import React from 'react';
@@ -33,7 +33,7 @@
     );
     ```
 
-6.  **Attach an event listener to an actual DOM node using a virtual node**
+6.  **Attach an event listener to an actual DOM node using a virtual node**<br/>
     To add an event listener to an element, define a method to handle the event and associate that method with the element event you want to listen for:
 
     ```js
@@ -51,7 +51,7 @@
     export default AlertButton;
     ```
 
-7.  **Use`create-react-app` to stand up a new React application and import needed assets**
+7.  **Use`create-react-app` to stand up a new React application and import needed assets**<br/>
     We have two ways of creating a create-react-app application.
     We create the default create-react-application by typing in our terminal
 
@@ -59,14 +59,14 @@
     npx create-react-app <name of app> --use-npm
     ```
 
-8.  **Construct a custom 'create-react-app' template and use it to start a new application**
+8.  **Construct a custom 'create-react-app' template and use it to start a new application**<br/>
     We also have a special App Academy template which we create by using:
 
     ```js
     npx create-react-app --template @appacademy/simple --use-npm
     ```
 
-9.  **Pass props into a React component**
+9.  **Pass props into a React component**<br/>
     React elements can accept props from its parent or from wherever it is created or rendered. props is an object that gets passed down from the parent function component into the child function component.
 
     ```js
@@ -116,7 +116,7 @@
 
     You can pass down **as many props keys as you want**.
 
-10. **Destructure props**
+10. **Destructure props**<br/>
     You can destructure the props object in the function component's parameter.
 
     ```js
@@ -137,7 +137,7 @@
     }
     ```
 
-11. **Create routes using components from the react-router-dom package**
+11. **Create routes using components from the react-router-dom package**<br/>
     a. Import the react-router-dom package: `npm i react-router-dom'
     b. In your index.js:
 
@@ -182,7 +182,7 @@
     </Switch>;
     ```
 
-12. **Generate navigation links using components from the react-router-dom package**
+12. **Generate navigation links using components from the react-router-dom package**<br/>
     We create links by either using React Router's <Link> or <NavLink>. They issue an on-click navigation event to a route defined in your app's router. Either renders an anchor tag with a correctly set href attribute. The difference between <Link> and <NavLink> is that NavLink has the ability to add extra styling when the path it links to matches the current path.
 
     **Link:**
@@ -201,7 +201,7 @@
     <NavLink activeClassName="blue" to="/hello">Hello</NavLink>
     ```
 
-13. **Use React Router params to access path variables**
+13. **Use React Router params to access path variables**<br/>
     A component's props can also hold information about a URL's parameters. The router will match route segments starting at : up to the next /, ?, or #. Such segments are wildcard values that make up your route parameters.
 
     **Example:**
@@ -224,7 +224,7 @@
     }
     ```
 
-14. **Use React Router history to programmatically change the browser's URL**
+14. **Use React Router history to programmatically change the browser's URL**<br/>
     The useHistory hook returns a history object that has convenient methods for navigation. history lets you update the URL programmatically For example, suppose you want to push a new URL **when the user clicks a button**. It has two useful methods: - push - We can push the user to the location of our choosing by naming the route we are pushing them to:
 
         ```js
@@ -240,7 +240,7 @@
         }
         ```
 
-15. **Redirect users by using the <Redirect> component**
+15. **Redirect users by using the <Redirect> component**<br/>
     The <Redirect> component from React Router helps you redirect users if you do not want to give access to the current Comonent/Page. The component takes only one prop: to. When it renders, it replaces the current URL with the value of its to prop.
 
     ```js
@@ -257,7 +257,7 @@
         export default Profile;
     ```
 
-16. **Use the useState hook to manage a component's state.**
+16. **Use the useState hook to manage a component's state.**<br/>
     We use the useState hook to preserve values in a Component between function calls.
     The useState hook is a function that take an argument which represent a default value.
     The function returns an array with two indexes:
@@ -266,7 +266,7 @@
 
     The default state can be of any data structure.
 
-17. **Initialize and update state within a function component.**
+17. **Initialize and update state within a function component.**<br/>
 
     ```js
     import { useState } from 'react';
@@ -283,7 +283,7 @@
     }
     ```
 
-18. **Use the useEffect hook to trigger an operation as a result of a side effect.**
+18. **Use the useEffect hook to trigger an operation as a result of a side effect.**<br/>
     useEffect is a function that takes two arguments, a callback function and a dependency array. The callback function is the 'effect'. The dependency array deligates when the useEffect function will be invoked based on state and/or props.
 
     By using the useEffect Hook, you tell React that your component needs to do something after render. React will remember the function you passed (referred to as "the effect"), and call it later after performing the DOM updates.
@@ -311,17 +311,17 @@
     }
     ```
 
-19. **Describe the three ways in which a re-render can be triggered for a React component.**
+19. **Describe the three ways in which a re-render can be triggered for a React component.**<br/>
 
     1. Change in state
     2. Change in props
     3. Passing an anonymous function as a prop
     4. forceUpdate() **Not Recommended**
 
-20. **Optimize your application's performance by using useCallback.**
+20. **Optimize your application's performance by using useCallback.**<br/>
     We optimize performance by using useCallback when a function has been passed to a component, and the component only needs to re-render based on its state or a certain prop value it has been passed.
 
-21. **Construct a form that can capture user data using common form inputs.**
+21. **Construct a form that can capture user data using common form inputs.**<br/>
 
 ```js
 import { useState } from 'react';
@@ -356,10 +356,10 @@ function ContactUs() {
 export default ContactUs;
 ```
 
-22. **Describe a controlled input.**
+22. **Describe a controlled input.**<br/>
     ** A React form input with `value` and `onChange` props.**
 
-23. **Handle form submission.**
+23. **Handle form submission.**<br/>
     To submit a form we create a submission function. It takes an event as an argument.
     We must first prevent the default html actions from taking over using `event.preventDefualt` Then we can create a new data structure to hold our information, usually an object.
 
@@ -378,7 +378,7 @@ export default ContactUs;
     // we can now make an api call to our backend to POST our information
     ```
 
-24. **Implement form validations.**
+24. **Implement form validations.**<br/>
     Frontend validation **DO NOT** replace backend validations.
     We can implement form validations using vanilla js:
 
@@ -422,7 +422,7 @@ export default ContactUs;
     }
     ```
 
-25. a. **Create a React wrapper component**
+25. a. **Create a React wrapper component**<br/>
     In React we can create a parent wrapper component that can render its children dynamically.
     Each React component has a props property called children. This is a reserved property that holds an array of all the children components wrapped by the parent component.
 
@@ -465,7 +465,7 @@ export default ContactUs;
     ReactDOM.render(<Root>, document.getElementById('root'))
     ```
 
-26. **Retrieve values from a Context throughout your application**
+26. **Retrieve values from a Context throughout your application**<br/>
     We retrieve values from a context using the useContext hook and the created Context.
 
     ```js
@@ -483,5 +483,5 @@ export default ContactUs;
     }
     ```
 
-27. **Describe the relationships between provider, consumer, and context**
+27. **Describe the relationships between provider, consumer, and context**<br/>
     Context allows "global" data in a React application and stores a single value. A context's Provider is used to wrap a React application to enable all components in the application to access the context's value. A Consumer is a React component that reads a context's value.
