@@ -30,7 +30,7 @@
     We use the React DevTools extension as an extension in our Browser DevTools to debug and view when a component is rendering
 
 4.  **Describe how JSX transforms into actual DOM nodes**<br/>
-    To transfer JSX into DOM nodes, we use the ReactDOM.render method. It takes a React virtual DOM node's changes allows Babel to transpile it and sends the JS changes to the DOM.
+    To transfer JSX into DOM nodes, we use the ReactDOM.render method. It takes a React virtual DOM node's changes allows Babel to transpile it and sends the JS changes to commit to the DOM.
 
 5.  **Use the `ReactDOM.render` method to have React render your virtual DOM nodes under an actual DOM node**<br/>
 
@@ -73,15 +73,17 @@
     npx create-react-app <name of app> --use-npm
     ```
 
+    npx gives us the latest version. `--use-npm` just means to use npm instead of yarn or some other package manager
+
 8.  **Construct a custom 'create-react-app' template and use it to start a new application**<br/>
     We have a special App Academy template which we create by using:
 
     ```js
-    npx create-react-app --template @appacademy/simple --use-npm
+    npx create-react-app --template @appacademy/react-v17 --use-npm
     ```
 
 9.  **Pass props into a React component**<br/>
-    React elements can accept props from its parent or from wherever it is created or rendered. **props** is an object that gets passed down from the parent function component into the child function component.
+    `props` is an object that gets passed down from the parent component to the child component. The values can be of any data structure including a function (which is an object)
 
     ```js
     function NavBar() {
@@ -110,6 +112,7 @@
     }
     ```
 
+    **Accessing props**
     To access our props object in another component we pass it the props argument and React will invoke the functional component with the props object.
 
     ```js
@@ -182,7 +185,7 @@
 
     Above you import your BrowserRouter with which you can wrap your entire route hierarchy. This makes routing information from React Router available to all its descendent components.
 
-    Then in the component of your choosing (usually top tier such as App.js), you create your routes using the Route and Switch Components
+    Then in the component of your choosing, usually top tier such as App.js, you can create your routes using the Route and Switch Components
 
     ```js
     import { Route, Switch } from 'react';
@@ -199,7 +202,7 @@
     ```
 
 12. **Generate navigation links using components from the react-router-dom package**<br/>
-    We create links by either using React Router's <Link> or <NavLink>. They issue an on-click navigation event to a route defined in your app's router. Either renders an anchor tag with a correctly set href attribute. The difference between <Link> and <NavLink> is that NavLink has the ability to add extra styling when the path it links to matches the current path.
+    We create links by either using React Router's `Link` or `NavLink`. They issue an on-click navigation event to a route defined in your app's router. Either renders an anchor tag with a correctly set href attribute. The difference between `Link` and `NavLink` is that NavLink has the ability to add extra styling when the path it links to matches the current path.
 
     **Link:**
 
@@ -228,6 +231,8 @@
     </Route>
     ```
 
+    **Accessing Parameters**
+
     We access these parameters in our component by using the useParams function from react-router-dom.
 
     ```js
@@ -241,7 +246,8 @@
     ```
 
 14. **Use React Router history to programmatically change the browser's URL**<br/>
-    The useHistory hook returns a history object that has convenient methods for navigation. history lets you update the URL programmatically For example, suppose you want to push a new URL **when the user clicks a button**. It has two useful methods: - push - We can push the user to the location of our choosing by naming the route we are pushing them to:
+    <span style="red">_This one is important because we spent so little time on it. It is better to use after something has happened, for example, a button click_</span>
+    The `useHistory` hook returns a history object that has convenient methods for navigation. history lets you update the URL programmatically For example, suppose you want to push a new URL when the user clicks a button. It has two useful methods: - push - We can push the user to the location of our choosing by naming the route we are pushing them to:
 
         ```js
         import {useHistory} from 'react-router-dom'
