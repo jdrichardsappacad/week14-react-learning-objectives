@@ -28,9 +28,10 @@ import { num1 as myNumber1, num2 as myNumber2 } from './exports';
 
 Go to [Exports](./exports-cheatsheet.md) to see how to export.
 
-### Links:
+### LINKS
 
-- [Answers](./learning-objectives-filled.md)
-- [Imports CheatSheet](./imports-cheatsheet.md)
-- [Exports CheatSheet](./exports-cheatsheet.md)
-- [Read Me](./README.md)
+1. [Learning Objectives, (no answers)](./learning-objectives-empty.md)
+2. [Learning Objectives With Answers](./learning-objectives-filled.md)
+3. [Imports CheatSheet](./imports-cheatsheet.md)
+4. [Exports CheatSheet](./exports-cheatsheet.md)
+5. [Imports, Exports One-to-One](./import-export-glance.md)

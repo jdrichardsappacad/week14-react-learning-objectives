@@ -246,8 +246,12 @@
     ```
 
 14. **Use React Router history to programmatically change the browser's URL**<br/>
-    _**This one is important because we spent so little time on it. It is better to use after something has happened, for example, a button click**_
-    The `useHistory` hook returns a history object that has convenient methods for navigation. history lets you update the URL programmatically For example, suppose you want to push a new URL when the user clicks a button. It has two useful methods: - push - We can push the user to the location of our choosing by naming the route we are pushing them to:
+    _**This one is important because we spent so little time on it. It is better to use History after something has happened, for example, a button click**_<br />
+    The `useHistory` hook returns a history object that has convenient methods for navigation. history lets you update the URL programmatically For example, suppose you want to push a new URL when the user clicks a button. It has two useful methods:
+    a. push
+    b. replace
+
+    We can push the user to the location of our choosing by naming the route we are pushing them to:
 
         ```js
         import {useHistory} from 'react-router-dom'
@@ -263,7 +267,7 @@
         ```
 
 15. **Redirect users by using the <Redirect> component**<br/>
-    The <Redirect> component from React Router helps you redirect users if you do not want to give access to the current Comonent/Page. The component takes only one prop: to. When it renders, it replaces the current URL with the value of its to prop.
+    The <Redirect> component from React Router helps you redirect users if you do not want to give access to the current Comonent/Page/Location. The component takes only one prop: to. When it renders, it replaces the current URL with the value of its `to` prop.
 
     ```js
         import { Redirect, useParams } from 'react-router-dom';
@@ -306,11 +310,11 @@
     ```
 
 18. **Use the useEffect hook to trigger an operation as a result of a side effect.**<br/>
-    useEffect is a function that takes two arguments, a callback function and a dependency array. The callback function is the 'effect'. The dependency array deligates when the useEffect function will be invoked based on state and/or props.
+    useEffect is a function that takes two arguments, a callback function and a dependency array. The callback function is the 'effect'. The dependency array delegates when the useEffect function will be invoked based on state and/or props.
 
-    By using the useEffect Hook, you tell React that your component needs to do something after render. React will remember the function you passed (referred to as "the effect"), and call it later after performing the DOM updates.
+    By using the useEffect Hook, you tell React that your component needs to do something **after** render. React will remember the function you passed (referred to as "the effect"), and call it later after performing the DOM updates.
 
-    We use useEffect to control our side-effects. Side effects include, manually touching the DOM, timers, data fetching, subscriptions.
+    We use useEffect to control our side-effects. Side effects include, manually touching the DOM, timers, data fetching, subscriptions, etc.
 
     ```js
     import { useEffect } from 'react';
@@ -319,7 +323,7 @@
       const [count, setCount] = useState(0);
 
       useEffect(() => {
-        document.title = `You have clicke the button ${count} times.`;
+        document.title = `You have clicked the button ${count} times.`;
       }, [count]);
 
       return (
@@ -341,7 +345,28 @@
     4. forceUpdate() **Not Recommended**
 
 20. **Optimize your application's performance by using useCallback.**<br/>
-    We optimize performance by using useCallback when a function has been passed to a component, and the component only needs to re-render based on its state or a certain prop value it has been passed.
+    We optimize performance by using `useCallback` when a function has been passed to a component where the component only needs to re-render based on its state or props value.
+
+    Use case: You want to send both a function and a value to a child component. However, the child component ONLY wants to re-render based on the value, NOT the function.
+
+    `useCallback` takes a functino and a dependency array (similar to `useEffect`)
+
+    ```js
+    import { useCallback } from 'react';
+
+    export default function Example({ term }) {
+      const hanldeClickItem = useCallback(
+        (event) => console.log('You clicked me', event.target),
+        [term]
+      );
+
+      return(
+        <MyList term={term} onClick={handleClickItem}>
+      )
+    }
+    ```
+
+    Normally, the `onClick` prop would cause the child to re-render every time state in the parent component changed, even if the child was not listening for it. `useCallback` will prevent this behavior.
 
 21. **Construct a form that can capture user data using common form inputs.**<br/>
 
@@ -352,6 +377,7 @@ function ContactUs() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [comments, setComments] = useState('');
 
   return (
     <div>
@@ -367,7 +393,21 @@ function ContactUs() {
         </div>
         <div>
           <label htmlFor='phone'>Phone:</label>
-          <input id='phone' type='text' value={phone} />
+          <input
+            id='phone'
+            type='text'
+            onChange={(e) => setPhone(e.target.value)}
+            value={phone}
+          />
+        </div>
+        <div>
+          <label htmlFor='comments'>Comments:</label>
+          <textarea
+            id='comments'
+            name='comments'
+            onChange={(e) => setComments(e.target.value)}
+            value={comments}
+          />
         </div>
         <button>Submit</button>
       </form>
@@ -379,30 +419,33 @@ export default ContactUs;
 ```
 
 22. **Describe a controlled input.**<br/>
-    ** IMPORTANT**
+    **IMPORTANT**
     A React form input with `value` and `onChange` props.
+
 23. **Handle form submission.**<br/>
     To submit a form we create a submission function. It takes an event as an argument.
-    We must first prevent the default html actions from taking over using `event.preventDefualt` Then we can create a new data structure to hold our information, usually an object.
+    We must first prevent the default html actions from taking over by using `event.preventDefualt()` Then we can create a new data structure to hold our information, usually an object. This object can then be set to state, or passed to your database through your backend API using fetch.
 
     ```js
-    const onSubmit = (e) => {
+    const onSubmit = (event) => {
     // Prevent the default form behavior
     // so the page doesn't reload.
-    e.preventDefault();
+    event.preventDefault();
 
     // Create a new object for the contact us information.
     const contactUsInformation = {
         name,
         email,
+        phone,
+        comments
     };
 
     // we can now make an api call to our backend to POST our information
     ```
 
 24. **Implement form validations.**<br/>
-    Frontend validation **DO NOT** replace backend validations.
-    We can implement form validations using vanilla js:
+    Frontend validation **DOES NOT** replace backend validations.
+    We can implement form validations using vanilla js in our component:
 
     ```js
     const validate = () => {
@@ -420,10 +463,11 @@ export default ContactUs;
 
     ```js
     const onSubmit = (e) => {
-    // Prevent the default form behavior
-    // so the page doesn't reload.
+
+    // Prevent the default form behavior so the page doesn't reload.
     e.preventDefault();
 
+    //create errors array
     const errors = validate();
 
     // If we have validation errors...
@@ -433,11 +477,11 @@ export default ContactUs;
     } else {
           //Create a new object for the contact us information.
         const contactUsInformation = {
-      name,
-      email,
-    };
-
-    // Make FETCH CALL TO API
+          name,
+          email,
+          phone,
+          comments
+        };
 
     // clear validation errors
     setValidationErrors([]);
@@ -448,10 +492,10 @@ export default ContactUs;
     In React we can create a parent wrapper component that can render its children dynamically.
     Each React component has a props property called children. This is a reserved property that holds an array of all the children components wrapped by the parent component.
 
-    b. **Create a React provider component that will manage the value of a Context**
+    b. **Create a React provider component that will manage the value of a Context**<br />
     We include the Provider Component inside the wrapper. It must include the exact key word value as a prop and pass its values in any chosen data structure. Values include strings, functions, objects etc.
 
-    c. **Share and manage global information within a React application using Context**
+    c. **Share and manage global information within a React application using Context**<br />
     We can share global information within a React application by using the createContext function from React to create a global object. We declare and export a variable with the context to make it available to other components. CreateContext accespts an argument which will be used as the default value. It will be overriden if context is defined inside the Provider Component.
 
     ```js
@@ -464,7 +508,7 @@ export default ContactUs;
     //WRAPPER COMPONENT
     export default function PupProvider(props) {
       return (
-        // PROVIDER COMPONENT
+        // PROVIDER
         <PupContext.Provider value={/* some value*/}>
             {props.children}
         </PupContext.Provider>;
@@ -476,6 +520,9 @@ export default ContactUs;
 
     ```js
     //index.js file
+    import {PupProvider} from './context/PupProvider'
+    import App from './App'
+
     export default function Root() {
       return (
         <PupProvider>
@@ -514,3 +561,4 @@ export default ContactUs;
 2. [Learning Objectives With Answers](./learning-objectives-filled.md)
 3. [Imports CheatSheet](./imports-cheatsheet.md)
 4. [Exports CheatSheet](./exports-cheatsheet.md)
+5. [Imports, Exports One-to-One](./import-export-glance.md)
