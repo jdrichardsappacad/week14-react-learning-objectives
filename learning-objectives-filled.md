@@ -341,7 +341,7 @@
 
     1. Change in state
     2. Change in props
-    3. Passing an anonymous function as a prop
+    3. When Context Changes
     4. forceUpdate() **Not Recommended**
 
 20. **Optimize your application's performance by using useCallback.**<br/>
