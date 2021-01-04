@@ -501,7 +501,6 @@ export default ContactUs;
 
     ```js
     import { createContext } from 'react';
-    import {PupContext} from './context/PupContext'
 
     // create Context object to hold our Global information
     export const PupContext = createContext();
@@ -521,7 +520,7 @@ export default ContactUs;
 
     ```js
     //index.js file
-    import {PupProvider} from './context/PupProvider'
+    import { PupProvider } from './context/PupProvider'
     import App from './App'
 
     export default function Root() {
@@ -540,10 +539,10 @@ export default ContactUs;
 
     ```js
     import { useContext } from 'react';
-    import { PupsContext } from './context/PupsContext';
+    import { PupContext } from './context/PupsContext';
 
     export default function PupsReveal() {
-      const myPups = useContext(PupsContext);
+      const myPups = useContext(PupContext);
 
       return (
         <div>
