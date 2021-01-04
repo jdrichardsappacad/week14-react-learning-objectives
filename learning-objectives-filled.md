@@ -188,7 +188,7 @@
     Then in the component of your choosing, usually top tier such as App.js, you can create your routes using the Route and Switch Components
 
     ```js
-    import { Route, Switch } from 'react';
+    import { Route, Switch } from 'react-router-dom';
     import Home from './components/Home';
 
     <Switch>
@@ -207,7 +207,7 @@
     **Link:**
 
     ```js
-    import {Link} from 'react-router-dom'
+    import { Link } from 'react-router-dom'
     <Link to='/'>Home</Link>
     <Link to='/users'>Users</Link>
     ```
@@ -215,6 +215,7 @@
     **Navlink:**
 
     ```js
+    import { NavLink } from 'react-router-dom'
     <NavLink to="/">App</NavLink>
     <NavLink activeClassName="red" to="/users">Users</NavLink>
     <NavLink activeClassName="blue" to="/hello">Hello</NavLink>
@@ -254,7 +255,7 @@
     We can push the user to the location of our choosing by naming the route we are pushing them to:
 
         ```js
-        import {useHistory} from 'react-router-dom'
+        import { useHistory } from 'react-router-dom'
 
         export default function Example() {
 
@@ -303,7 +304,7 @@
       return{
         <div>
             <h1>The count is {count}</h1>
-            <button onClick={()=>setCount(prevCount=>prevCount+1)}>Increment</button>
+            <button onClick={() => setCount(prevCount => prevCount + 1)}>Increment</button>
         </div>
       }
     }
@@ -349,7 +350,7 @@
 
     Use case: You want to send both a function and a value to a child component. However, the child component ONLY wants to re-render based on the value, NOT the function.
 
-    `useCallback` takes a functino and a dependency array (similar to `useEffect`)
+    `useCallback` takes a function and a dependency array (similar to `useEffect`)
 
     ```js
     import { useCallback } from 'react';
@@ -500,7 +501,6 @@ export default ContactUs;
 
     ```js
     import { createContext } from 'react';
-    import {PupContext} from './context/PupContext'
 
     // create Context object to hold our Global information
     export const PupContext = createContext();
@@ -520,7 +520,7 @@ export default ContactUs;
 
     ```js
     //index.js file
-    import {PupProvider} from './context/PupProvider'
+    import { PupProvider } from './context/PupProvider'
     import App from './App'
 
     export default function Root() {
@@ -539,10 +539,10 @@ export default ContactUs;
 
     ```js
     import { useContext } from 'react';
-    import { PupsContext } from './context/PupsContext';
+    import { PupContext } from './context/PupsContext';
 
     export default function PupsReveal() {
-      const myPups = useContext(PupsContext);
+      const myPups = useContext(PupContext);
 
       return (
         <div>
