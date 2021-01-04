@@ -215,6 +215,7 @@
     **Navlink:**
 
     ```js
+    import { NavLink } from 'react-router-dom'
     <NavLink to="/">App</NavLink>
     <NavLink activeClassName="red" to="/users">Users</NavLink>
     <NavLink activeClassName="blue" to="/hello">Hello</NavLink>
@@ -303,7 +304,7 @@
       return{
         <div>
             <h1>The count is {count}</h1>
-            <button onClick={()=>setCount(prevCount=>prevCount+1)}>Increment</button>
+            <button onClick={() => setCount(prevCount => prevCount + 1)}>Increment</button>
         </div>
       }
     }
@@ -349,7 +350,7 @@
 
     Use case: You want to send both a function and a value to a child component. However, the child component ONLY wants to re-render based on the value, NOT the function.
 
-    `useCallback` takes a functino and a dependency array (similar to `useEffect`)
+    `useCallback` takes a function and a dependency array (similar to `useEffect`)
 
     ```js
     import { useCallback } from 'react';
