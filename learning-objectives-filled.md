@@ -188,7 +188,7 @@
     Then in the component of your choosing, usually top tier such as App.js, you can create your routes using the Route and Switch Components
 
     ```js
-    import { Route, Switch } from 'react';
+    import { Route, Switch } from 'react-router-dom';
     import Home from './components/Home';
 
     <Switch>
@@ -207,7 +207,7 @@
     **Link:**
 
     ```js
-    import {Link} from 'react-router-dom'
+    import { Link } from 'react-router-dom'
     <Link to='/'>Home</Link>
     <Link to='/users'>Users</Link>
     ```
@@ -254,7 +254,7 @@
     We can push the user to the location of our choosing by naming the route we are pushing them to:
 
         ```js
-        import {useHistory} from 'react-router-dom'
+        import { useHistory } from 'react-router-dom'
 
         export default function Example() {
 
