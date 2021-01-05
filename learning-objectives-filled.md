@@ -1,7 +1,7 @@
 # REACT Week 14 Learning Objectives Answers
 
 1.  **Explain how React uses a tree data structure called the virtual DOM to model the DOM**<br />
-    The virtual DOM is a copy of the actual DOM tree. Updates in React are made to the virtual DOM. React uses a diffing algorithm to reconcile the changes and send the to the DOM to commit and paint.<br /><br />
+    The virtual DOM is a copy of the actual DOM tree. Updates in React are made to the virtual DOM. React uses a diffing algorithm to reconcile the changes and send the to the DOM to commit and paint.<br />
 
 2.  **Create virtual DOM nodes using JSX**<br />
     To create a React virtual DOM node using JSX, define HTML syntax in a JavaScript file.
@@ -73,7 +73,7 @@
     npx create-react-app <name of app> --use-npm
     ```
 
-    npx gives us the latest version. `--use-npm` just means to use npm instead of yarn or some other package manager<br /><br />
+    npx gives us the latest version. `--use-npm` just means to use npm instead of yarn or some other package manager<br />
 
 8.  **Construct a custom 'create-react-app' template and use it to start a new application**<br />
     We have a special App Academy template which we create by using:
@@ -133,7 +133,7 @@
     }
     ```
 
-    You can pass down **as many props keys as you want**.<br /><br />
+    You can pass down **as many props keys as you want**.<br />
 
 10. **Destructure props**<br />
     You can destructure the props object in the function component's parameter.
@@ -291,7 +291,7 @@
     a. currentState
     b. updater function
 
-    The default state can be of any data structure.<br /><br />
+    The default state can be of any data structure.<br />
 
 17. **Initialize and update state within a function component.**<br />
 
@@ -367,7 +367,7 @@
     }
     ```
 
-    Normally, the `onClick` prop would cause the child to re-render every time state in the parent component changed, even if the child was not listening for it. `useCallback` will prevent this behavior.<br /><br />
+    Normally, the `onClick` prop would cause the child to re-render every time state in the parent component changed, even if the child was not listening for it. `useCallback` will prevent this behavior.<br />
 
 21. **Construct a form that can capture user data using common form inputs.**<br />
 
@@ -420,7 +420,7 @@ export default ContactUs;
 ```
 
 22. **Describe a controlled input.**<br />
-    A React form input with `value` and `onChange` props.<br /><br />
+    A React form input with `value` and `onChange` props.<br />
 
 23. **Handle form submission.**<br />
     To submit a form we create a submission function. It takes an event as an argument.
