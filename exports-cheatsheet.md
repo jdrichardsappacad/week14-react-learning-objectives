@@ -22,7 +22,7 @@ export const array = ['apple', 'pear', 'banana'];
 
 export const obj = {
   firstName: 'Foo',
-  lastName: 'Bar'
+  lastName: 'Bar',
 };
 
 export function add(number1, number2) {
@@ -40,7 +40,7 @@ return number1 - number2;
 
 **_This also applies to components. If you have more than one component in the same file to export, you can only export default one of them_**
 
-Go to [Imports](./imports.md) to see how to import
+Go to [Imports](./imports-cheatsheet.md) to see how to import
 
 ### LINKS
 
