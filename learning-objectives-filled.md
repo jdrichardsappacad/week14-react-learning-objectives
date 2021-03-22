@@ -330,7 +330,7 @@
       return (
         <div>
           <h1>You have clicked the button {count} times</h1>
-          <button onClick={() => setCount(prevCount => prevCount + 1)}>
+          <button onClick={() => setCount((prevCount) => prevCount + 1)}>
             Click
           </button>
         </div>
@@ -385,28 +385,35 @@ function ContactUs() {
       <h2>Contact Us</h2>
       <form>
         <div>
-          <label htmlFor='name'>Name:</label>
-          <input id='name' type='text' value={name} />
-        </div>
-        <div>
-          <label htmlFor='email'>Email:</label>
-          <input id='email' type='text' value={email} />
-        </div>
-        <div>
-          <label htmlFor='phone'>Phone:</label>
           <input
-            id='phone'
             type='text'
-            onChange={e => setPhone(e.target.value)}
+            placeholder='Name'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             value={phone}
           />
         </div>
         <div>
-          <label htmlFor='comments'>Comments:</label>
+          <input
+            placeholder='Email'
+            type='text'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div>
+          <input
+            placeholder='Phone'
+            type='text'
+            onChange={(e) => setPhone(e.target.value)}
+            value={phone}
+          />
+        </div>
+        <div>
           <textarea
-            id='comments'
+            placeholder='Comments'
             name='comments'
-            onChange={e => setComments(e.target.value)}
+            onChange={(e) => setComments(e.target.value)}
             value={comments}
           />
         </div>
